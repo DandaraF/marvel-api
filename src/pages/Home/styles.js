@@ -4,15 +4,25 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 20px;
 `;
 
 export const Content = styled.div`
-  width: 350px;
+  min-width: 350px;
+  height: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 8px;
   flex-flow: row wrap;
 `;
 
 export const Title = styled.h1``;
 
 export const Text = styled.p``;
+
+export const Button = styled.button`
+  width: 80px;
+  height: 30px;
+`;
