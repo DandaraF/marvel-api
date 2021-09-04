@@ -1,8 +1,13 @@
 import { createGlobalStyle } from "styled-components";
+import theme from "./theme";
 
 const GlobalStyle = createGlobalStyle`
 body{
-  width: 100%;
+    width: 100%;
+    background-color: ${({ theme }) => theme.palette.background.default};
+    color: ${({ theme }) => theme.palette.text.primary};
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
   }
   *{
     margin:0;
