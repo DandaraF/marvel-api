@@ -4,9 +4,10 @@ export const Container = styled.div`
   margin: 20px 0;
 `;
 
-export const Content = styled.div`
+export const Card = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 5px;
   width: 165px;
   height: 100%;

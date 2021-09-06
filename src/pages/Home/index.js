@@ -1,8 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
-import Card from "../../components/Card";
 import api from "../../services/api";
 import * as S from "./styles";
-
+import { Search, Card } from "../../components";
 const Home = () => {
   const [series, setSeries] = useState([]);
 
@@ -32,6 +31,7 @@ const Home = () => {
   return (
     <S.Container>
       <S.Content>
+        <Search />
         {series.map((serie) => (
           <Card
             key={serie.id}
@@ -39,7 +39,7 @@ const Home = () => {
             title={serie.title}
           />
         ))}
-      </S.Content>{" "}
+      </S.Content>
       <S.Button onClick={handleMore}>Next</S.Button>
     </S.Container>
   );
