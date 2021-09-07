@@ -15,12 +15,18 @@ const Theme = {
       },
     },
     background: {
-      default: "#0F1B2B",
+      default: "#181818",
       modal: "#E5E5E5",
+      input: "#313131",
+      header: "#202020",
     },
     button: {
       primary: "#E51937",
       secondary: "#11443F",
+    },
+    placeholder: {
+      primary: "#CBD2D9",
+      secondary: "#9AA5B1",
     },
   },
 };
