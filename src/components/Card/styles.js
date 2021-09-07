@@ -1,25 +1,30 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  margin: 20px 0;
+  margin: 10px 0;
 `;
 
 export const Card = styled.div`
+  padding: 0 4px 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
-  width: 165px;
+  gap: 8px;
+  width: 170px;
   height: 100%;
+  border-radius: 4px;
+  background-color: ${({ theme }) => theme.palette.text.light.primary};
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 `;
 
 export const Img = styled.img`
-  width: 160px;
+  width: 170px;
   height: 220px;
+  border-radius: 4px 4px 0 0;
 `;
 
 export const Title = styled.h1`
-  font-size: 1.1rem;
+  font-size: ${(props) => props.fontSize || "13px"};
   text-align: center;
 `;
 
