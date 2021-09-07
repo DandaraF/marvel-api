@@ -1,12 +1,12 @@
 import * as S from "./styles";
 
-const Card = ({ image, title }) => {
+const Card = ({ image, title, onClick }) => {
   return (
     <S.Container>
-      <S.Content>
+      <S.Card onClick={onClick}>
         <S.Img src={image} alt={title} />
         <S.Title>{title}</S.Title>
-      </S.Content>
+      </S.Card>
     </S.Container>
   );
 };
