@@ -4,8 +4,8 @@ import theme from "./theme";
 const GlobalStyle = createGlobalStyle`
 body{
     width: 100%;
-    background-color: ${({ theme }) => theme.palette.background.default};
-    color: ${({ theme }) => theme.palette.text.primary};
+    background-color: ${({ theme }) => theme.palette.background.modal};
+    color: ${({ theme }) => theme.palette.background.de};
     font-size: 10px;
     font-family: 'Roboto', sans-serif;
   }
