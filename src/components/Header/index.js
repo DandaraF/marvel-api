@@ -3,7 +3,7 @@ import Input from "../Input";
 import * as S from "./styles";
 import { find, logo } from "../../assets/img";
 
-const Search = () => {
+const Header = () => {
   return (
     <S.Container>
       <S.Content>
@@ -19,4 +19,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default Header;

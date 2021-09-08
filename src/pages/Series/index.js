@@ -2,7 +2,7 @@ import { useEffect, useState, useCallback } from "react";
 import { apiSeries } from "../../services/request";
 import api from "../../services/api";
 import * as S from "./styles";
-import { Search, Card, Modal } from "../../components";
+import { Header, Card, Modal, Layout } from "../../components";
 
 const Series = () => {
   const [series, setSeries] = useState([]);
@@ -31,36 +31,37 @@ const Series = () => {
   }
 
   return (
-    <S.Container>
-      <S.Content>
-        <Search />
-        {series.map((serie) => (
-          <Card
-            onClick={() => {
-              setIsModalVisible(true);
-              getSerie(
-                serie.id,
-                serie.title,
-                serie.thumbnail.path + "." + serie.thumbnail.extension,
-                serie.description
-              );
-            }}
-            key={serie.id}
-            image={serie.thumbnail.path + "." + serie.thumbnail.extension}
-            title={serie.title}
-          />
-        ))}
-        {isModalVisible ? (
-          <Modal
-            onClose={() => setIsModalVisible(false)}
-            img={query.img}
-            title={query.title}
-            description={query.description}
-          />
-        ) : null}
-      </S.Content>
-      <S.Button onClick={handleMore}>Next</S.Button>
-    </S.Container>
+    <Layout>
+      <S.Container>
+        <S.Content>
+          {series.map((serie) => (
+            <Card
+              onClick={() => {
+                setIsModalVisible(true);
+                getSerie(
+                  serie.id,
+                  serie.title,
+                  serie.thumbnail.path + "." + serie.thumbnail.extension,
+                  serie.description
+                );
+              }}
+              key={serie.id}
+              image={serie.thumbnail.path + "." + serie.thumbnail.extension}
+              title={serie.title}
+            />
+          ))}
+          {isModalVisible ? (
+            <Modal
+              onClose={() => setIsModalVisible(false)}
+              img={query.img}
+              title={query.title}
+              description={query.description}
+            />
+          ) : null}
+        </S.Content>
+        <S.Button onClick={handleMore}>Next</S.Button>
+      </S.Container>
+    </Layout>
   );
 };
 

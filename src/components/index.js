@@ -1,7 +1,8 @@
 import Card from "./Card";
 import Input from "./Input";
 import Button from "./Button";
-import Search from "./Search";
+import Header from "./Header";
 import Modal from "./Modal";
+import Layout from "./Layout";
 
-export { Card, Input, Button, Search, Modal };
+export { Card, Input, Button, Header, Modal, Layout };
