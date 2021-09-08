@@ -15,6 +15,7 @@ export const Card = styled.div`
   border-radius: 4px;
   background-color: ${({ theme }) => theme.palette.text.light.primary};
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 `;
 
 export const Img = styled.img`
