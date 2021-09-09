@@ -21,7 +21,7 @@ const Theme = {
       header: "#202020",
     },
     button: {
-      primary: "#E51937",
+      primary: "#EE171F",
       secondary: "#11443F",
     },
     placeholder: {
