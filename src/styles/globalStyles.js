@@ -5,7 +5,7 @@ body{
     width: 100%;
     height: 100%;
     background-color: ${({ theme }) => theme.palette.background.modal};
-    color: ${({ theme }) => theme.palette.background.de};
+    color: ${({ theme }) => theme.palette.background.default};
     font-size: 10px;
     font-family: 'Roboto', sans-serif;
   }

@@ -9,6 +9,7 @@ const Button = ({
   altImg,
   textButton,
   onClick,
+  bgColor,
   ...other
 }) => {
   return (
@@ -19,10 +20,12 @@ const Button = ({
         type={type || "submit"}
         value={value}
         onClick={onClick}
+        bgColor={bgColor}
         {...other}
       >
-        {textButton}
-        <S.Img src={img} alt={altImg} />
+        <S.Text>{textButton}</S.Text>
+
+        {img && <S.Img src={img} alt={altImg} />}
       </S.Button>
     </S.Container>
   );

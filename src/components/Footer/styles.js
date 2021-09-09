@@ -4,6 +4,7 @@ export const Container = styled.div`
   padding: 10px 5px;
   width: 100%;
   height: 100%;
+  box-sizing: border-box;
   background-color: ${({ theme }) => theme.palette.background.header};
   @media (min-width: 768px) {
     padding: 20px 10px;
@@ -85,3 +86,5 @@ export const IconLikedin = styled.img`
     height: 28px;
   }
 `;
+
+export const Link = styled.lin;

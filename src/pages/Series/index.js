@@ -2,7 +2,8 @@ import { useEffect, useState, useCallback } from "react";
 import { apiSeries } from "../../services/request";
 import api from "../../services/api";
 import * as S from "./styles";
-import { Header, Card, Modal, Layout } from "../../components";
+import { Button, Card, Modal, Layout } from "../../components";
+import theme from "../../styles/theme";
 
 const Series = () => {
   const [series, setSeries] = useState([]);
@@ -59,7 +60,15 @@ const Series = () => {
             />
           ) : null}
         </S.Content>
-        <S.Button onClick={handleMore}>Next</S.Button>
+        <Button
+          width="200px"
+          height="35px"
+          bgColor={theme.palette.button.primary}
+          textButton="Mais"
+          onClick={handleMore}
+        >
+          Mais
+        </Button>
       </S.Container>
     </Layout>
   );
