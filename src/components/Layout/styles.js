@@ -10,6 +10,7 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   flex: 1 0 auto;
+  margin: 20px 0;
 `;
 
 export const Footer = styled.div`
