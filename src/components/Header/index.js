@@ -1,5 +1,6 @@
 import Button from "../Button";
 import Input from "../Input";
+import Menu from "../Menu";
 import * as S from "./styles";
 import { find, logo } from "../../assets/img";
 
@@ -15,6 +16,7 @@ const Header = () => {
           </S.Search>
         </S.ContentHeader>
       </S.Content>
+      <Menu />
     </S.Container>
   );
 };

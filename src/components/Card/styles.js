@@ -18,6 +18,12 @@ export const Card = styled.div`
   cursor: pointer;
   @media (min-width: 768px) {
     width: 190px;
+    :hover {
+      -webkit-transform: scale(1.1);
+      -webkit-transition: -webkit-transform 0.5s ease;
+      transition: transform 0.5s ease;
+      transform: scale(1.1);
+    }
   }
 `;
 
