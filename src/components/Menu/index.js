@@ -1,13 +1,26 @@
 import * as S from "./styles";
+import { groot, batman, movie, tv } from "../../assets/img";
 
 const Menu = () => {
   return (
     <S.Container>
       <S.Menu>
-        <S.ItemMenu>CHARACTERS</S.ItemMenu>
-        <S.ItemMenu>COMICS</S.ItemMenu>
-        <S.ItemMenu>MOVIES</S.ItemMenu>
-        <S.ItemMenu>TV SHOWS</S.ItemMenu>
+        <S.ItemMenu>
+          <S.Img src={groot} alt="Groot" />
+          CHARACTERS
+        </S.ItemMenu>
+        <S.ItemMenu>
+          <S.Img src={batman} alt="batman" />
+          COMICS
+        </S.ItemMenu>
+        <S.ItemMenu>
+          <S.Img src={movie} alt="movie" />
+          MOVIES
+        </S.ItemMenu>
+        <S.ItemMenu>
+          <S.Img src={tv} alt="tv" />
+          TV SHOWS
+        </S.ItemMenu>
       </S.Menu>
     </S.Container>
   );
