@@ -7,7 +7,7 @@ export const Container = styled.div`
   box-sizing: border-box;
   background-color: ${({ theme }) => theme.palette.background.header};
   @media (min-width: 768px) {
-    padding: 20px 10px;
+    padding: 30px 10px;
   }
 `;
 export const Content = styled.div`

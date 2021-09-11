@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
+  background-color: blue;
   width: 100%;
   height: 100%;
   margin: 20px 0 0;
@@ -9,7 +10,7 @@ export const Container = styled.div`
 
 export const Menu = styled.div`
   display: flex;
-  width: 110px;
+  width: 120px;
   padding: 10px 10px;
   gap: 10px;
   flex-direction: column;
