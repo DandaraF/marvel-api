@@ -1,4 +1,4 @@
-# Séries Marvel
+# API Marvel
 
 Consumindo dados da API da Marvel usando ReactJS. A aplicação listará séries da Marvel. 
 
