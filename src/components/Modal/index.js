@@ -1,19 +1,10 @@
+import Overlay from "../Overlay";
 import * as S from "./styles";
 import { close } from "../../assets/img";
 
-const Modal = ({
-  id = "modal",
-  onClose = () => {},
-  img,
-  title,
-  description,
-}) => {
-  const handleOutsideClick = (e) => {
-    if (e.target.id === id) onClose();
-  };
-
+const Modal = ({ onClose = () => {}, img, title, description }) => {
   return (
-    <S.Modal id={id} onClick={handleOutsideClick}>
+    <Overlay onClose={onClose}>
       <S.Container>
         <S.BarTop>
           <S.Button onClick={onClose}>
@@ -28,7 +19,7 @@ const Modal = ({
           </S.ContentCard>
         </S.Content>
       </S.Container>
-    </S.Modal>
+    </Overlay>
   );
 };
 

@@ -4,39 +4,53 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
   background-color: ${({ theme }) => theme.palette.background.header};
+  @media (min-width: 768px) {
+    /* padding-top: 10px; */
+  }
 `;
 export const Content = styled.div`
-  display: flex;
+  /* display: flex; */
   width: 100%;
   height: 100%;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
 `;
 
 export const ContentHeader = styled.div`
-  margin: 15px 10px;
+  margin: 15px 0;
   display: flex;
   align-items: center;
-  justify-content: center;
-  min-width: 350px;
-  width: 55%;
+  /* min-width: 350px; */
+  width: 100%;
   height: 100%;
   box-sizing: border-box;
   justify-content: space-between;
+  gap: 25px;
+  padding: 0 10px;
+  @media (min-width: 768px) {
+    gap: 0;
+    padding: 15px 10px 5px;
+    margin: 0;
+  }
 `;
 
 export const Search = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   width: auto;
   height: 25px;
   background-color: ${({ theme }) => theme.palette.background.input};
+  @media (min-width: 768px) {
+    height: 35px;
+  }
 `;
 
 export const Img = styled.img`
-  margin-left: 10px;
   width: 100px;
   @media (min-width: 768px) {
-    margin-left: 0;
+    /* display: flex;
+    position: absolute;
+    left: 15px; */
     width: 120px;
   }
 `;

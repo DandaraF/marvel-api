@@ -10,16 +10,15 @@ export const Button = styled.button`
   border-style: none;
   cursor: pointer;
   border-radius: 2px;
-  @media (min-width: 768px) {
-    :hover {
-      background-color: ${(props) => props.theme.palette.background.header};
-    }
-  }
 `;
 
 export const Img = styled.img`
   width: 14px;
   height: 14px;
+  @media (min-width: 768px) {
+    width: 16px;
+    height: 16px;
+  }
 `;
 
 export const Text = styled.p`
