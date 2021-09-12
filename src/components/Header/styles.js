@@ -5,21 +5,17 @@ export const Container = styled.div`
   height: 100%;
   background-color: ${({ theme }) => theme.palette.background.header};
   @media (min-width: 768px) {
-    /* padding-top: 10px; */
   }
 `;
 export const Content = styled.div`
-  /* display: flex; */
   width: 100%;
   height: 100%;
-  /* justify-content: flex-end; */
 `;
 
 export const ContentHeader = styled.div`
   margin: 15px 0;
   display: flex;
   align-items: center;
-  /* min-width: 350px; */
   width: 100%;
   height: 100%;
   box-sizing: border-box;
@@ -48,9 +44,6 @@ export const Search = styled.div`
 export const Img = styled.img`
   width: 100px;
   @media (min-width: 768px) {
-    /* display: flex;
-    position: absolute;
-    left: 15px; */
     width: 120px;
   }
 `;

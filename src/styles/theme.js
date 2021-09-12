@@ -12,6 +12,7 @@ const Theme = {
       dark: {
         primary: "#6A8376",
         secondary: "#FFC045",
+        tertiary: "#000000",
       },
     },
     background: {

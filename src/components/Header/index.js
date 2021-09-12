@@ -21,7 +21,7 @@ const Header = () => {
           <S.Search>
             <Input placeholder="Search" />
             <Button img={find} altImg="find" />
-          </S.Search>{" "}
+          </S.Search>
           <Toggle onClose={toggleMenu} />
         </S.ContentHeader>
         <Menu show={showMenu} onClose={toggleMenu} />

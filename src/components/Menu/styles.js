@@ -1,5 +1,26 @@
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+export const Overlay = styled.div`
+  width: 100%;
+  @media (max-width: 767px) {
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    transition: opacity 0.5s;
+    z-index: 2;
+    ${(props) =>
+      props.show &&
+      css`
+        opacity: 1;
+        pointer-events: auto;
+      `};
+  }
+`;
 
 export const Container = styled.div`
   display: flex;
@@ -11,7 +32,7 @@ export const Container = styled.div`
   width: 140px;
   height: 100vh;
   z-index: 7;
-  transform: translateX(${(props) => (props.show ? "0" : "-100%")});
+  transform: translateX(${(props) => (props.show ? "-100%" : "0")});
   transition: transform 0.8s;
   box-sizing: border-box;
   background-color: ${({ theme }) => theme.palette.background.header};
@@ -67,6 +88,14 @@ export const ItemMenu = styled(Link)`
       background-color: rgba(238, 23, 31, 0.88);
       transition: 500ms all;
     }
+  }
+`;
+
+export const Hr = styled.div`
+  height: 1px;
+  border-top: 1px solid ${({ theme }) => theme.palette.background.input};
+  @media (min-width: 768px) {
+    display: none;
   }
 `;
 
