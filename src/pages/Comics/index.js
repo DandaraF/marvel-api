@@ -27,8 +27,8 @@ const Comics = () => {
       console.log(err);
     }
   });
-  function getSerie(id, title, img, description, comics) {
-    setQuery({ id, title, img, description, comics });
+  function getSerie(id, title, img, description) {
+    setQuery({ id, title, img, description });
   }
 
   return (
@@ -58,6 +58,7 @@ const Comics = () => {
               img={query.img}
               title={query.title}
               description={query.description}
+              creator={query.creator}
             />
           ) : null}
         </S.Content>
