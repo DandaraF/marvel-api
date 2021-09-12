@@ -10,22 +10,22 @@ const Menu = ({ onClose = () => {}, show }) => {
           <Toggle onClose={onClose} />
         </S.IconMenu>
         <S.Menu>
-          <S.ItemMenu>
+          <S.ItemMenu to="/Characters">
             <S.Img src={groot} alt="Groot" />
             CHARACTERS
           </S.ItemMenu>
-          <S.ItemMenu>
+          <S.ItemMenu to="/Comics">
             <S.Img src={batman} alt="batman" />
             COMICS
           </S.ItemMenu>
-          <S.ItemMenu>
+          {/* <S.ItemMenu>
             <S.Img src={movie} alt="movie" />
             MOVIES
           </S.ItemMenu>
           <S.ItemMenu>
             <S.Img src={tv} alt="tv" />
             TV SHOWS
-          </S.ItemMenu>
+          </S.ItemMenu> */}
           <S.Hr />
         </S.Menu>
       </S.Container>

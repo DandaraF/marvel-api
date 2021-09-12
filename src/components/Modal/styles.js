@@ -20,7 +20,7 @@ export const Container = styled.div`
   height: auto;
   border-radius: 2px;
   @media (min-width: 769px) {
-    width: 50%;
+    width: 35%;
   }
 `;
 
@@ -52,11 +52,11 @@ export const Content = styled.div`
 `;
 
 export const Img = styled.img`
-  width: 100px;
-  height: 150px;
+  width: 110px;
+  height: 160px;
   @media (min-width: 768px) {
-    width: 150px;
-    height: 225px;
+    width: 200px;
+    height: 270px;
   }
 `;
 export const ContentCard = styled.div`
@@ -65,21 +65,21 @@ export const ContentCard = styled.div`
   gap: 6px;
   margin: 0 5px;
   @media (min-width: 768px) {
-    margin: 0 10px;
-    gap: 15px;
+    gap: 10px;
   }
 `;
 
 export const Title = styled.h1`
   font-size: 15px;
+  margin-bottom: -8px;
   @media (min-width: 768px) {
     font-size: 20px;
   }
 `;
 export const Text = styled.p`
   text-align: justify;
-  font-size: 12px;
+  font-size: 15px;
   @media (min-width: 768px) {
-    font-size: 14px;
+    font-size: 20px;
   }
 `;

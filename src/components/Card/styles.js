@@ -53,3 +53,5 @@ export const ContainerTitle = styled.div`
     min-height: 54px;
   }
 `;
+
+export const Text = styled.p``;

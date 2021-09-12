@@ -14,8 +14,10 @@ const Modal = ({ onClose = () => {}, img, title, description }) => {
         <S.Content>
           <S.Img src={img} alt={title} />
           <S.ContentCard>
-            <S.Title>{title}</S.Title>
-            <S.Text>{description}</S.Text>
+            <S.Title>Name:</S.Title>
+            <S.Text> {title}</S.Text>
+            <S.Title>Description:</S.Title>
+            <S.Text> {description}</S.Text>
           </S.ContentCard>
         </S.Content>
       </S.Container>
