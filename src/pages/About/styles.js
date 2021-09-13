@@ -17,11 +17,10 @@ export const Content = styled.div`
   gap: 8px;
   flex-flow: row wrap;
   @media (min-width: 768px) {
+    width: auto;
     max-width: 1200px;
     gap: 20px;
   }
 `;
-
-export const Title = styled.h1``;
 
 export const Text = styled.p``;

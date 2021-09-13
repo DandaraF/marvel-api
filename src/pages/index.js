@@ -1,5 +1,5 @@
 import Home from "./Home";
-import Series from "./Series";
-import Teste from "./Teste";
+import About from "./About";
+import Comics from "./Comics";
 
-export { Home, Teste, Series };
+export { Home, Comics, About };

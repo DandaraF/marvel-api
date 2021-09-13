@@ -1,17 +1,17 @@
 import { useEffect, useState, useCallback } from "react";
-import { apiSeries } from "../../services/request";
+import { apiRequest } from "../../services/request";
 import api from "../../services/api";
 import * as S from "./styles";
-import { Button, Card, Modal, Layout } from "../../components";
+import { Button, Card, Modal, Layout, TitlePage } from "../../components";
 import theme from "../../styles/theme";
 
-const Series = () => {
+const Comics = () => {
   const [series, setSeries] = useState([]);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [query, setQuery] = useState({});
 
   useEffect(() => {
-    apiSeries(setSeries);
+    apiRequest("/series", setSeries);
   }, []);
 
   const handleMore = useCallback(async () => {
@@ -27,14 +27,15 @@ const Series = () => {
       console.log(err);
     }
   });
-  function getSerie(id, title, img, description, comics) {
-    setQuery({ id, title, img, description, comics });
+  function getSerie(id, title, img, description) {
+    setQuery({ id, title, img, description });
   }
 
   return (
     <Layout>
       <S.Container>
         <S.Content>
+          <TitlePage>Comics</TitlePage>
           {series.map((serie) => (
             <Card
               onClick={() => {
@@ -57,6 +58,7 @@ const Series = () => {
               img={query.img}
               title={query.title}
               description={query.description}
+              creator={query.creator}
             />
           ) : null}
         </S.Content>
@@ -64,14 +66,13 @@ const Series = () => {
           width="200px"
           height="35px"
           bgColor={theme.palette.button.primary}
-          textButton="Mais"
           onClick={handleMore}
         >
-          Mais
+          More
         </Button>
       </S.Container>
     </Layout>
   );
 };
 
-export default Series;
+export default Comics;

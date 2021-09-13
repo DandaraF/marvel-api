@@ -6,20 +6,6 @@ import linkedin from "./linkedin.svg";
 import menu from "./menu.svg";
 import groot from "./groot.svg";
 import batman from "./batman.svg";
-import movie from "./movie.svg";
-import tv from "./tv.svg";
-import john from "./john.png";
+import about from "./about.svg";
 
-export {
-  find,
-  logo,
-  close,
-  github,
-  linkedin,
-  menu,
-  groot,
-  batman,
-  movie,
-  tv,
-  john,
-};
+export { find, logo, close, github, linkedin, menu, groot, batman, about };

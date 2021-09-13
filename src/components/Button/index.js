@@ -7,7 +7,7 @@ const Button = ({
   value,
   img,
   altImg,
-  textButton,
+  children,
   onClick,
   bgColor,
   ...other
@@ -23,7 +23,7 @@ const Button = ({
         bgColor={bgColor}
         {...other}
       >
-        <S.Text>{textButton}</S.Text>
+        <S.Text>{children}</S.Text>
 
         {img && <S.Img src={img} alt={altImg} />}
       </S.Button>

@@ -10,6 +10,13 @@ export const Button = styled.button`
   border-style: none;
   cursor: pointer;
   border-radius: 2px;
+
+  @media (min-width: 768px) {
+    :hover {
+      background-color: ${(props) =>
+        props.bgColorHover || props.theme.palette.background.input};
+    }
+  }
 `;
 
 export const Img = styled.img`

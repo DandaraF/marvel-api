@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <S.Container>
       <S.Content>
-        <S.ContentHeader>
+        <S.ContentHeader to="/" onClick={() => window.scrollTo(0, 0)}>
           <S.Img src={logo} alt="Logo Marvel" />
           <S.Search>
             <Input placeholder="Search" />
