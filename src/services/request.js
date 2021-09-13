@@ -1,12 +1,12 @@
 import api from "./api";
 
-function apiSeries(setSeries) {
+function apiRequest(name, setValue) {
   api
-    .get("/series")
+    .get(name)
     .then((response) => {
-      setSeries(response.data.data.results);
+      setValue(response.data.data.results);
     })
     .catch((err) => console.log(err));
 }
 
-export { apiSeries };
+export { apiRequest };

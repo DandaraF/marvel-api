@@ -1,19 +1,10 @@
+import Overlay from "../Overlay";
 import * as S from "./styles";
 import { close } from "../../assets/img";
 
-const Modal = ({
-  id = "modal",
-  onClose = () => {},
-  img,
-  title,
-  description,
-}) => {
-  const handleOutsideClick = (e) => {
-    if (e.target.id === id) onClose();
-  };
-
+const Modal = ({ onClose = () => {}, img, title, description }) => {
   return (
-    <S.Modal id={id} onClick={handleOutsideClick}>
+    <Overlay onClose={onClose}>
       <S.Container>
         <S.BarTop>
           <S.Button onClick={onClose}>
@@ -23,12 +14,14 @@ const Modal = ({
         <S.Content>
           <S.Img src={img} alt={title} />
           <S.ContentCard>
-            <S.Title>{title}</S.Title>
-            <S.Text>{description}</S.Text>
+            <S.Title>Name:</S.Title>
+            <S.Text> {title}</S.Text>
+            <S.Title>Description:</S.Title>
+            <S.Text> {description}</S.Text>
           </S.ContentCard>
         </S.Content>
       </S.Container>
-    </S.Modal>
+    </Overlay>
   );
 };
 

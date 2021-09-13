@@ -14,13 +14,19 @@ export const Input = styled.input`
   padding-left: 6px;
   border-radius: 2px;
   font-size: 10px;
-  ::placeholder {
-    color: ${(props) =>
-      props.colorPlacerHolder || props.theme.palette.placeholder.primary};
-  }
-  :focus {
-    outline: none;
-    border-color: ${({ theme }) => theme.palette.button.primary};
-    box-shadow: 0 0 1px ${({ theme }) => theme.palette.button.primary};
+  @media (min-width: 768px) {
+    width: ${(props) => props.desktopWidth || "200px"};
+    height: ${(props) => props.desktopHeight || "35px"};
+    font-size: 14px;
+    ::placeholder {
+      color: ${(props) =>
+        props.colorPlacerHolder || props.theme.palette.placeholder.primary};
+    }
+    :focus {
+      outline: none;
+      width: ${(props) => props.focusWidth || "300px"};
+      border-color: ${({ theme }) => theme.palette.button.primary};
+      box-shadow: 0 0 1px ${({ theme }) => theme.palette.button.primary};
+    }
   }
 `;

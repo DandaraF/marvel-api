@@ -1,5 +1,9 @@
 import styled from "styled-components";
+
 export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   height: 100%;
   gap: 20px;
@@ -12,13 +16,11 @@ export const Content = styled.div`
   justify-content: center;
   gap: 8px;
   flex-flow: row wrap;
+  @media (min-width: 768px) {
+    width: auto;
+    max-width: 1200px;
+    gap: 20px;
+  }
 `;
-
-export const Title = styled.h1``;
 
 export const Text = styled.p``;
-
-export const Button = styled.button`
-  width: 80px;
-  height: 30px;
-`;
