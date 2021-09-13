@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -19,7 +20,7 @@ export const Content = styled.div`
     justify-content: flex-start;
   }
 `;
-export const ContainerLogo = styled.div`
+export const ContainerLogo = styled(Link)`
   display: flex;
   align-items: center;
   @media (min-width: 768px) {
@@ -31,6 +32,7 @@ export const Logo = styled.img`
   width: 100px;
   @media (min-width: 768px) {
     width: 120px;
+    cursor: pointer;
   }
 `;
 
@@ -60,6 +62,13 @@ export const TextContact = styled.p`
     font-size: 18px;
   }
 `;
+export const Text = styled.p`
+  font-size: 12px;
+  color: ${({ theme }) => theme.palette.text.primary};
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
+`;
 
 export const Strong = styled.strong`
   background-color: ${({ theme }) => theme.palette.text.dark.secondary};
@@ -71,20 +80,18 @@ export const Strong = styled.strong`
 export const Icon = styled.img`
   width: 18px;
   height: 18px;
-  cursor: pointer;
   @media (min-width: 768px) {
     width: 23px;
     height: 23px;
+    cursor: pointer;
   }
 `;
 export const IconLikedin = styled.img`
   width: 23px;
   height: 23px;
-  cursor: pointer;
   @media (min-width: 768px) {
     width: 28px;
     height: 28px;
+    cursor: pointer;
   }
 `;
-
-export const Link = styled.lin;

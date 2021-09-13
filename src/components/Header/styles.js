@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -12,7 +13,7 @@ export const Content = styled.div`
   height: 100%;
 `;
 
-export const ContentHeader = styled.div`
+export const ContentHeader = styled(Link)`
   margin: 15px 0;
   display: flex;
   align-items: center;
@@ -26,6 +27,7 @@ export const ContentHeader = styled.div`
     gap: 0;
     padding: 15px 10px 5px;
     margin: 0;
+    cursor: pointer;
   }
 `;
 

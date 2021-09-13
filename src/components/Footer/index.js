@@ -10,14 +10,15 @@ const Footer = () => {
   return (
     <S.Container>
       <S.Content>
-        <S.ContainerLogo>
+        <S.ContainerLogo to="/" onClick={() => window.scrollTo(0, 0)}>
           <S.Logo src={logo} alt="Logo Marvel" />
         </S.ContainerLogo>
 
         <S.Contact>
           <S.TextContact>
-            &copy; Desenvolvido por <S.Strong>Dandara Silva</S.Strong>
+            &copy; Developed by <S.Strong>Dandara Silva</S.Strong>
           </S.TextContact>
+
           <S.ContentIcon>
             <S.Icon
               src={github}

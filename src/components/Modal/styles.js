@@ -16,7 +16,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   background-color: ${({ theme }) => theme.palette.text.primary};
-  width: 90%;
+  width: 95%;
   height: auto;
   border-radius: 2px;
   @media (min-width: 769px) {
