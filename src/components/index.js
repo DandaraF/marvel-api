@@ -1,7 +1,25 @@
 import Card from "./Card";
 import Input from "./Input";
 import Button from "./Button";
-import Search from "./Search";
+import Header from "./Header";
 import Modal from "./Modal";
+import Footer from "./Footer";
+import Layout from "./Layout";
+import Menu from "./Menu";
+import Toggle from "./Toggle";
+import Overlay from "./Overlay";
+import TitlePage from "./TitlePage";
 
-export { Card, Input, Button, Search, Modal };
+export {
+  Card,
+  Input,
+  Button,
+  Header,
+  Modal,
+  Footer,
+  Layout,
+  Menu,
+  Toggle,
+  Overlay,
+  TitlePage,
+};
