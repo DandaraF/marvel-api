@@ -9,6 +9,7 @@ import Menu from "./Menu";
 import Toggle from "./Toggle";
 import Overlay from "./Overlay";
 import TitlePage from "./TitlePage";
+import Loading from "./Loading";
 
 export {
   Card,
@@ -22,4 +23,5 @@ export {
   Toggle,
   Overlay,
   TitlePage,
+  Loading,
 };
