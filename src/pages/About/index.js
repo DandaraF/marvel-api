@@ -11,9 +11,9 @@ const About = () => {
           <S.Category>
             <TitlePage>About</TitlePage>
             <S.Text>
-              Aplicação em ReactJS que consome dados da API da Marvel. A
-              aplicação possui recursos de navegação, pesquisas e exibições de
-              imagens.
+              ReactJS application that consumes data from Marvel API. The
+              application has features for browsing, searching and displaying
+              images.
             </S.Text>
           </S.Category>
           <S.Category>
