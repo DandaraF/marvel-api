@@ -1,18 +1,19 @@
 import styled from "styled-components";
 
-export const ContentTitle = styled.div`
+export const Content = styled.div`
   padding: 10px 5px;
   width: 100%;
   @media (min-width: 768px) {
   }
 `;
 
-export const Title = styled.h1`
-  font-size: 20px;
+export const SubTitle = styled.h1`
+  font-size: 16px;
   @media (min-width: 768px) {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 `;
+
 export const Hr = styled.div`
   margin-top: 2px;
   color: ${({ theme }) => theme.palette.background.input};
