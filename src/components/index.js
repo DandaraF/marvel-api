@@ -10,6 +10,7 @@ import Toggle from "./Toggle";
 import Overlay from "./Overlay";
 import TitlePage from "./TitlePage";
 import Loading from "./Loading";
+import SubTitle from "./SubTitle";
 
 export {
   Card,
@@ -24,4 +25,5 @@ export {
   Overlay,
   TitlePage,
   Loading,
+  SubTitle,
 };
