@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from "react";
+import React from "react";
 import { apiRequest } from "../../services/request";
 import api from "../../services/api";
 import * as S from "./styles";
@@ -13,15 +13,15 @@ import {
 import theme from "../../styles/theme";
 
 const Comics = () => {
-  const [series, setSeries] = useState([]);
-  const [isModalVisible, setIsModalVisible] = useState(false);
-  const [query, setQuery] = useState({});
+  const [series, setSeries] = React.useState([]);
+  const [isModalVisible, setIsModalVisible] = React.useState(false);
+  const [query, setQuery] = React.useState({});
 
-  useEffect(() => {
+  React.useEffect(() => {
     apiRequest("/series", setSeries);
   }, []);
 
-  const handleMore = useCallback(async () => {
+  const handleMore = React.seCallback(async () => {
     try {
       const offset = series.length;
       const response = await api.get("series", {

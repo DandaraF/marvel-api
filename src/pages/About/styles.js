@@ -33,7 +33,7 @@ export const Category = styled.div`
 export const Text = styled.p`
   text-align: justify;
   font-size: 14px;
-  padding: 0 10px;
+  padding: 0 ${(props) => props.padding};
   @media (min-width: 768px) {
     font-size: 20px;
   }
@@ -47,22 +47,28 @@ export const Item = styled.li`
 `;
 
 export const Created = styled.div`
+  margin-top: 5px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding-left: 10px;
 `;
 
 export const Contact = styled.div`
-  padding-right: 10px;
   display: flex;
-  gap: 5px;
+  gap: 4px;
+  @media (min-width: 768px) {
+    gap: 6px;
+  }
 `;
 
 export const Icon = styled.img`
   width: 15px;
   height: 15px;
   @media (min-width: 768px) {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
   }
 `;
 
