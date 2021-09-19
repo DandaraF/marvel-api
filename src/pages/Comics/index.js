@@ -21,7 +21,7 @@ const Comics = () => {
     apiRequest("/series", setSeries);
   }, []);
 
-  const handleMore = React.seCallback(async () => {
+  const handleMore = React.useCallback(async () => {
     try {
       const offset = series.length;
       const response = await api.get("series", {
