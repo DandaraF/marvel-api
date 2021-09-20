@@ -64,15 +64,15 @@ const Home = () => {
               description={query.description}
             />
           ) : null}
-          <Button
-            width="200px"
-            height="35px"
-            bgColor={theme.palette.button.primary}
-            onClick={handleMore}
-          >
-            More
-          </Button>
         </S.Content>
+        <Button
+          width="200px"
+          height="35px"
+          bgColor={theme.palette.button.primary}
+          onClick={handleMore}
+        >
+          More
+        </Button>
       </S.Container>
     </Layout>
   );

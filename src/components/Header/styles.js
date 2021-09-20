@@ -13,7 +13,7 @@ export const Content = styled.div`
   height: 100%;
 `;
 
-export const ContentHeader = styled(Link)`
+export const ContentHeader = styled.div`
   margin: 15px 0;
   display: flex;
   align-items: center;
@@ -27,8 +27,10 @@ export const ContentHeader = styled(Link)`
     gap: 0;
     padding: 15px 10px 5px;
     margin: 0;
-    cursor: pointer;
   }
+`;
+export const LinkHome = styled(Link)`
+  text-decoration: none;
 `;
 
 export const Search = styled.div`

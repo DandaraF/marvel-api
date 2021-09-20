@@ -14,11 +14,11 @@ const Menu = ({ onClose = () => {}, show }) => {
             <S.Img src={groot} alt="Groot" />
             CHARACTERS
           </S.ItemMenu>
-          <S.ItemMenu to="/Comics">
+          <S.ItemMenu to="/comics">
             <S.Img src={batman} alt="batman" />
             COMICS
           </S.ItemMenu>
-          <S.ItemMenu to="/About">
+          <S.ItemMenu to="/about">
             <S.Img src={about} alt="about" />
             ABOUT
           </S.ItemMenu>
