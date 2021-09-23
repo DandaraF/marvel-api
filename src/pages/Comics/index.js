@@ -2,14 +2,7 @@ import React from "react";
 import { apiRequest } from "../../services/request";
 import api from "../../services/api";
 import * as S from "./styles";
-import {
-  Button,
-  Card,
-  Modal,
-  Layout,
-  TitlePage,
-  Loading,
-} from "../../components";
+import { Button, Card, Modal, Layout, TitlePage } from "../../components";
 import theme from "../../styles/theme";
 
 const Comics = () => {
