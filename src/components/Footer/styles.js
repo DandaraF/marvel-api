@@ -62,13 +62,6 @@ export const TextContact = styled.p`
     font-size: 18px;
   }
 `;
-export const Text = styled.p`
-  font-size: 12px;
-  color: ${({ theme }) => theme.palette.text.primary};
-  @media (min-width: 768px) {
-    font-size: 18px;
-  }
-`;
 
 export const Strong = styled.strong`
   background-color: ${({ theme }) => theme.palette.text.dark.secondary};
@@ -93,5 +86,24 @@ export const IconLikedin = styled.img`
     width: 28px;
     height: 28px;
     cursor: pointer;
+  }
+`;
+
+export const ContainerInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  @media (min-width: 768px) {
+    gap: 12px;
+  }
+`;
+
+export const Text = styled.p`
+  font-size: 12px;
+  font-style: italic;
+  color: ${({ theme }) => theme.palette.text.primary};
+  @media (min-width: 768px) {
+    font-size: 15px;
   }
 `;

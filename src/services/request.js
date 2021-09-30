@@ -6,7 +6,7 @@ function apiRequest(name, setValue) {
     .then((response) => {
       setValue(response.data.data.results);
     })
-    .catch((err) => console.log(err));
+    .catch((err) => console.log("Erro: ", err));
 }
 
 export { apiRequest };

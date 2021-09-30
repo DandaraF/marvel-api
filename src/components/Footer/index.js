@@ -11,25 +11,28 @@ const Footer = () => {
           <S.Logo src={logo} alt="Logo Marvel" />
         </S.ContainerLogo>
 
-        {contact.map((data) => (
-          <S.Contact key={data.index}>
-            <S.TextContact>
-              &copy; Developed by <S.Strong>{data.name}</S.Strong>
-            </S.TextContact>
-            <S.ContentIcon>
-              <S.Icon
-                src={github}
-                alt="GitHub Dandara Silva"
-                onClick={() => linkUrl(data.github)}
-              />
-              <S.IconLikedin
-                src={linkedin}
-                alt="Linkedin Dandara Silva"
-                onClick={() => linkUrl(data.linkedin)}
-              />
-            </S.ContentIcon>
-          </S.Contact>
-        ))}
+        <S.ContainerInfo>
+          {contact.map((data) => (
+            <S.Contact key={data.index}>
+              <S.TextContact>
+                &copy; Developed by <S.Strong>{data.name}</S.Strong>
+              </S.TextContact>
+              <S.ContentIcon>
+                <S.Icon
+                  src={github}
+                  alt="GitHub Dandara Silva"
+                  onClick={() => linkUrl(data.github)}
+                />
+                <S.IconLikedin
+                  src={linkedin}
+                  alt="Linkedin Dandara Silva"
+                  onClick={() => linkUrl(data.linkedin)}
+                />
+              </S.ContentIcon>
+            </S.Contact>
+          ))}
+          <S.Text>Data provided by Marvel.</S.Text>
+        </S.ContainerInfo>
       </S.Content>
     </S.Container>
   );
