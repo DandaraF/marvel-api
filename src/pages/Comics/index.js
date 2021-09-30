@@ -1,4 +1,5 @@
-import React from "react";
+import { useState, useCallback, useEffect } from "react";
+import { useQuery, useModal } from "../../contexts/";
 import { apiRequest } from "../../services/request";
 import api from "../../services/api";
 import * as S from "./styles";
@@ -6,15 +7,15 @@ import { Button, Card, Modal, Layout, TitlePage } from "../../components";
 import theme from "../../styles/theme";
 
 const Comics = () => {
-  const [series, setSeries] = React.useState([]);
-  const [isModalVisible, setIsModalVisible] = React.useState(false);
-  const [query, setQuery] = React.useState({});
+  const [series, setSeries] = useState([]);
+  const { isModalVisible, setIsModalVisible } = useModal();
+  const { query, setQuery } = useQuery();
 
-  React.useEffect(() => {
+  useEffect(() => {
     apiRequest("/series", setSeries);
   }, []);
 
-  const handleMore = React.useCallback(async () => {
+  const handleMore = useCallback(async () => {
     try {
       const offset = series.length;
       const response = await api.get("series", {

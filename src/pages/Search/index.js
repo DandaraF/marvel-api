@@ -17,14 +17,8 @@ const Search = () => {
   // ];
 
   useEffect(() => {
-    // search(comics, title, query, setResult);
-    //   // search(characters, name, query, setResult);
-
     // search("characters", "name", query, setResult);
     search("comics", "title", query, setResult);
-    //   // search(query, setResult);
-    //   // apiRequest(`/comics?title=${query}`, setResult);
-    //   // apiRequest(`/characters?name=${query}`, setResult);
   }, [query]);
 
   return (
