@@ -14,7 +14,7 @@ const Loading = ({ height, width }) => {
   return (
     <Lottie
       options={defaultOptions}
-      height={height || 100}
+      height={height || 30}
       width={width || 100}
     />
   );

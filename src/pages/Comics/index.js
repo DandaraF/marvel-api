@@ -1,21 +1,30 @@
 import { useState, useCallback, useEffect } from "react";
-import { useQuery, useModal } from "../../contexts/";
+import { useQuery, useModal, useLoading } from "../../contexts/";
 import { apiRequest } from "../../services/request";
 import api from "../../services/api";
 import * as S from "./styles";
-import { Button, Card, Modal, Layout, TitlePage } from "../../components";
+import {
+  Button,
+  Card,
+  Modal,
+  Layout,
+  TitlePage,
+  Loading,
+} from "../../components";
 import theme from "../../styles/theme";
 
 const Comics = () => {
   const [series, setSeries] = useState([]);
   const { modal, setModal } = useModal();
   const { query, setQuery } = useQuery();
+  const { loading, setLoading } = useLoading();
 
   useEffect(() => {
     apiRequest("/series", setSeries);
   }, []);
 
   const handleMore = useCallback(async () => {
+    setLoading(true);
     try {
       const offset = series.length;
       const response = await api.get("series", {
@@ -24,19 +33,27 @@ const Comics = () => {
         },
       });
       setSeries([...series, ...response.data.data.results]);
+      setLoading(false);
     } catch (err) {
       console.log(err);
+      setLoading(false);
     }
   });
+
   function getSerie(id, title, img, description) {
-    setQuery({ id, title, img, description });
+    setQuery({
+      id,
+      title,
+      img,
+      description,
+    });
   }
 
   return (
     <Layout>
       <S.Container>
         <S.Content>
-          <TitlePage>Comics</TitlePage>
+          <TitlePage> Comics </TitlePage>
           {series.map((serie) => (
             <Card
               onClick={() => {
@@ -63,7 +80,7 @@ const Comics = () => {
             />
           ) : null}
         </S.Content>
-
+        {loading ? <Loading /> : ""}
         <Button
           width="200px"
           height="35px"
