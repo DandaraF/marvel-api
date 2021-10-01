@@ -1,12 +1,9 @@
 import * as S from "./styles";
 import { logo, github, linkedin } from "../../assets/img";
+import { contact } from "../../mocks/contactData";
+import { linkUrl } from "../../utils/link";
 
 const Footer = () => {
-  const linkUrl = (url) => {
-    window.open(url, "_blank");
-    return null;
-  };
-
   return (
     <S.Container>
       <S.Content>
@@ -14,26 +11,28 @@ const Footer = () => {
           <S.Logo src={logo} alt="Logo Marvel" />
         </S.ContainerLogo>
 
-        <S.Contact>
-          <S.TextContact>
-            &copy; Developed by <S.Strong>Dandara Silva</S.Strong>
-          </S.TextContact>
-
-          <S.ContentIcon>
-            <S.Icon
-              src={github}
-              alt="GitHub Dandara Silva"
-              onClick={() => linkUrl("https://github.com/DandaraF")}
-            />
-            <S.IconLikedin
-              src={linkedin}
-              alt="Linkedin Dandara Silva"
-              onClick={() =>
-                linkUrl("https://www.linkedin.com/in/dandara-silva-41745ba6/")
-              }
-            />
-          </S.ContentIcon>
-        </S.Contact>
+        <S.ContainerInfo>
+          {contact.map((data) => (
+            <S.Contact key={data.index}>
+              <S.TextContact>
+                &copy; Developed by <S.Strong>{data.name}</S.Strong>
+              </S.TextContact>
+              <S.ContentIcon>
+                <S.Icon
+                  src={github}
+                  alt="GitHub Dandara Silva"
+                  onClick={() => linkUrl(data.github)}
+                />
+                <S.IconLikedin
+                  src={linkedin}
+                  alt="Linkedin Dandara Silva"
+                  onClick={() => linkUrl(data.linkedin)}
+                />
+              </S.ContentIcon>
+            </S.Contact>
+          ))}
+          <S.Text>Data provided by Marvel.</S.Text>
+        </S.ContainerInfo>
       </S.Content>
     </S.Container>
   );

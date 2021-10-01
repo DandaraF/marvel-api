@@ -20,7 +20,7 @@ export const Container = styled.div`
   height: auto;
   border-radius: 2px;
   @media (min-width: 769px) {
-    width: 35%;
+    max-width: 600px;
   }
 `;
 
@@ -55,8 +55,8 @@ export const Img = styled.img`
   width: 110px;
   height: 160px;
   @media (min-width: 768px) {
-    width: 200px;
-    height: 270px;
+    width: 180px;
+    height: 240px;
   }
 `;
 export const ContentCard = styled.div`

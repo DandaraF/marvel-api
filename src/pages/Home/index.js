@@ -1,4 +1,5 @@
 import { useEffect, useState, useCallback } from "react";
+import { useQuery, useModal } from "../../contexts/";
 import { apiRequest } from "../../services/request";
 import api from "../../services/api";
 import { Button, Card, Modal, Layout, TitlePage } from "../../components";
@@ -7,8 +8,8 @@ import theme from "../../styles/theme";
 
 const Home = () => {
   const [characters, setCharacters] = useState([]);
-  const [isModalVisible, setIsModalVisible] = useState(false);
-  const [query, setQuery] = useState({});
+  const { isModalVisible, setIsModalVisible } = useModal();
+  const { query, setQuery } = useQuery();
 
   useEffect(() => {
     apiRequest("/characters", setCharacters);
@@ -64,15 +65,15 @@ const Home = () => {
               description={query.description}
             />
           ) : null}
-          <Button
-            width="200px"
-            height="35px"
-            bgColor={theme.palette.button.primary}
-            onClick={handleMore}
-          >
-            More
-          </Button>
         </S.Content>
+        <Button
+          width="200px"
+          height="35px"
+          bgColor={theme.palette.button.primary}
+          onClick={handleMore}
+        >
+          More
+        </Button>
       </S.Container>
     </Layout>
   );

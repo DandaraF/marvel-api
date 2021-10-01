@@ -21,6 +21,8 @@ const Button = ({
         value={value}
         onClick={onClick}
         bgColor={bgColor}
+        img={img}
+        altImg={altImg}
         {...other}
       >
         <S.Text>{children}</S.Text>

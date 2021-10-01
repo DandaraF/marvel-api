@@ -1,4 +1,5 @@
-import { useEffect, useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
+import { useQuery, useModal } from "../../contexts/";
 import { apiRequest } from "../../services/request";
 import api from "../../services/api";
 import * as S from "./styles";
@@ -7,8 +8,8 @@ import theme from "../../styles/theme";
 
 const Comics = () => {
   const [series, setSeries] = useState([]);
-  const [isModalVisible, setIsModalVisible] = useState(false);
-  const [query, setQuery] = useState({});
+  const { isModalVisible, setIsModalVisible } = useModal();
+  const { query, setQuery } = useQuery();
 
   useEffect(() => {
     apiRequest("/series", setSeries);
@@ -62,6 +63,7 @@ const Comics = () => {
             />
           ) : null}
         </S.Content>
+
         <Button
           width="200px"
           height="35px"
