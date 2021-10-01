@@ -17,7 +17,9 @@ const Modal = ({ onClose = () => {}, img, title, description }) => {
             <S.Title>Name:</S.Title>
             <S.Text> {title}</S.Text>
             <S.Title>Description:</S.Title>
-            <S.Text> {description}</S.Text>
+            <S.Text fontStyle="Italic">
+              {description ? description : "Description not available."}
+            </S.Text>
           </S.ContentCard>
         </S.Content>
       </S.Container>

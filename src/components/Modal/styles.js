@@ -80,6 +80,7 @@ export const Text = styled.p`
   text-align: justify;
   font-size: 15px;
   @media (min-width: 768px) {
-    font-size: 20px;
+    font-size: 18px;
+    font-style: ${(props) => props.fontStyle};
   }
 `;
