@@ -71,7 +71,3 @@ export const Icon = styled.img`
     height: 30px;
   }
 `;
-
-export const LinkIcon = styled(Link)`
-  text-decoration: none;
-`;
