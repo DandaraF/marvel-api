@@ -1,8 +1,15 @@
 import { useEffect, useState, useCallback } from "react";
-import { useQuery, useModal } from "../../contexts/";
+import { useQuery, useModal, useLoading } from "../../contexts/";
 import { apiRequest } from "../../services/request";
 import api from "../../services/api";
-import { Button, Card, Modal, Layout, TitlePage } from "../../components";
+import {
+  Button,
+  Card,
+  Modal,
+  Layout,
+  TitlePage,
+  Loading,
+} from "../../components";
 import * as S from "./styles";
 import theme from "../../styles/theme";
 
@@ -10,12 +17,14 @@ const Home = () => {
   const [characters, setCharacters] = useState([]);
   const { modal, setModal } = useModal();
   const { query, setQuery } = useQuery();
+  const { loading, setLoading } = useLoading();
 
   useEffect(() => {
     apiRequest("/characters", setCharacters);
   }, []);
 
   const handleMore = useCallback(async () => {
+    setLoading(true);
     try {
       const offset = characters.length;
       const response = await api.get("characters", {
@@ -24,8 +33,10 @@ const Home = () => {
         },
       });
       setCharacters([...characters, ...response.data.data.results]);
+      setLoading(false);
     } catch (err) {
       console.log(err);
+      setLoading(false);
     }
   });
   function getCharacter(id, name, img, description, series) {
@@ -65,15 +76,16 @@ const Home = () => {
               description={query.description}
             />
           ) : null}
-          <Button
-            width="200px"
-            height="35px"
-            bgColor={theme.palette.button.primary}
-            onClick={handleMore}
-          >
-            More
-          </Button>
         </S.Content>
+        {loading ? <Loading /> : ""}
+        <Button
+          width="200px"
+          height="35px"
+          bgColor={theme.palette.button.primary}
+          onClick={handleMore}
+        >
+          More
+        </Button>
       </S.Container>
     </Layout>
   );

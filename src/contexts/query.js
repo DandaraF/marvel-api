@@ -14,7 +14,7 @@ export function QueryProvider({ children }) {
 
 export function useQuery() {
   const context = useContext(QueryContext);
-  if (!context) throw new Error("useCount must be used within a QueryProvider");
+  if (!context) throw new Error("useQuery must be used within a QueryProvider");
 
   const { query, setQuery } = context;
   return { query, setQuery };
