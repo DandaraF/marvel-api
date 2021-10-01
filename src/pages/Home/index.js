@@ -8,7 +8,7 @@ import theme from "../../styles/theme";
 
 const Home = () => {
   const [characters, setCharacters] = useState([]);
-  const { isModalVisible, setIsModalVisible } = useModal();
+  const { modal, setModal } = useModal();
   const { query, setQuery } = useQuery();
 
   useEffect(() => {
@@ -39,7 +39,7 @@ const Home = () => {
           {characters.map((character) => (
             <Card
               onClick={() => {
-                setIsModalVisible(true);
+                setModal(true);
                 getCharacter(
                   character.id,
                   character.name,
@@ -57,23 +57,23 @@ const Home = () => {
               text={character.comics}
             />
           ))}
-          {isModalVisible ? (
+          {modal ? (
             <Modal
-              onClose={() => setIsModalVisible(false)}
+              onClose={() => setModal(false)}
               img={query.img}
               title={query.name}
               description={query.description}
             />
           ) : null}
+          <Button
+            width="200px"
+            height="35px"
+            bgColor={theme.palette.button.primary}
+            onClick={handleMore}
+          >
+            More
+          </Button>
         </S.Content>
-        <Button
-          width="200px"
-          height="35px"
-          bgColor={theme.palette.button.primary}
-          onClick={handleMore}
-        >
-          More
-        </Button>
       </S.Container>
     </Layout>
   );

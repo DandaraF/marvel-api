@@ -8,7 +8,7 @@ import theme from "../../styles/theme";
 
 const Comics = () => {
   const [series, setSeries] = useState([]);
-  const { isModalVisible, setIsModalVisible } = useModal();
+  const { modal, setModal } = useModal();
   const { query, setQuery } = useQuery();
 
   useEffect(() => {
@@ -40,7 +40,7 @@ const Comics = () => {
           {series.map((serie) => (
             <Card
               onClick={() => {
-                setIsModalVisible(true);
+                setModal(true);
                 getSerie(
                   serie.id,
                   serie.title,
@@ -53,9 +53,9 @@ const Comics = () => {
               title={serie.title}
             />
           ))}
-          {isModalVisible ? (
+          {modal ? (
             <Modal
-              onClose={() => setIsModalVisible(false)}
+              onClose={() => setModal(false)}
               img={query.img}
               title={query.title}
               description={query.description}
