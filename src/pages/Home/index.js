@@ -1,21 +1,30 @@
 import { useEffect, useState, useCallback } from "react";
-import { useQuery, useModal } from "../../contexts/";
+import { useQuery, useModal, useLoading } from "../../contexts/";
 import { apiRequest } from "../../services/request";
 import api from "../../services/api";
-import { Button, Card, Modal, Layout, TitlePage } from "../../components";
+import {
+  Button,
+  Card,
+  Modal,
+  Layout,
+  TitlePage,
+  Loading,
+} from "../../components";
 import * as S from "./styles";
 import theme from "../../styles/theme";
 
 const Home = () => {
   const [characters, setCharacters] = useState([]);
-  const { isModalVisible, setIsModalVisible } = useModal();
+  const { modal, setModal } = useModal();
   const { query, setQuery } = useQuery();
+  const { loading, setLoading } = useLoading();
 
   useEffect(() => {
     apiRequest("/characters", setCharacters);
   }, []);
 
   const handleMore = useCallback(async () => {
+    setLoading(true);
     try {
       const offset = characters.length;
       const response = await api.get("characters", {
@@ -24,8 +33,10 @@ const Home = () => {
         },
       });
       setCharacters([...characters, ...response.data.data.results]);
+      setLoading(false);
     } catch (err) {
       console.log(err);
+      setLoading(false);
     }
   });
   function getCharacter(id, name, img, description, series) {
@@ -39,7 +50,7 @@ const Home = () => {
           {characters.map((character) => (
             <Card
               onClick={() => {
-                setIsModalVisible(true);
+                setModal(true);
                 getCharacter(
                   character.id,
                   character.name,
@@ -57,15 +68,16 @@ const Home = () => {
               text={character.comics}
             />
           ))}
-          {isModalVisible ? (
+          {modal ? (
             <Modal
-              onClose={() => setIsModalVisible(false)}
+              onClose={() => setModal(false)}
               img={query.img}
               title={query.name}
               description={query.description}
             />
           ) : null}
         </S.Content>
+        {loading ? <Loading /> : ""}
         <Button
           width="200px"
           height="35px"
