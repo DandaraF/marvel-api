@@ -3,8 +3,6 @@ import styled from "styled-components";
 export const ContentTitle = styled.div`
   padding: 10px 5px;
   width: 100%;
-  @media (min-width: 768px) {
-  }
 `;
 
 export const Title = styled.h1`

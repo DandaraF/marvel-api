@@ -32,20 +32,17 @@ const About = () => {
                 <S.Text>{data.name}</S.Text>
                 <S.Text>{data.email}</S.Text>
                 <S.Contact>
-                  <S.LinkIcon>
-                    <S.Icon
-                      src={linkedinBlack}
-                      alt="Linkedin"
-                      onClick={() => linkUrl(data.linkedin)}
-                    />
-                  </S.LinkIcon>
-                  <S.LinkIcon>
-                    <S.Icon
-                      src={githubBlack}
-                      alt="GitHub"
-                      onClick={() => linkUrl(data.github)}
-                    />
-                  </S.LinkIcon>
+                  <S.Icon
+                    src={linkedinBlack}
+                    alt="Linkedin"
+                    onClick={() => linkUrl(data.linkedin)}
+                  />
+
+                  <S.Icon
+                    src={githubBlack}
+                    alt="GitHub"
+                    onClick={() => linkUrl(data.github)}
+                  />
                 </S.Contact>
               </S.Created>
             ))}
