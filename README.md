@@ -5,8 +5,9 @@ Consumindo dados da API da Marvel usando ReactJS. Na aplicação é possivel pes
 ## Tecnologias utilizadas
 
 <li>ReactJS</li>
+<li>ESLint</li>
 <li>Axios</li>
 <li>Styled Components</li>
-<li>js-md5</li>
+<li>md5</li>
 
 
