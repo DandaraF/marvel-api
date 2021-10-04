@@ -69,5 +69,6 @@ export const Icon = styled.img`
   @media (min-width: 768px) {
     width: 30px;
     height: 30px;
+    cursor: pointer;
   }
 `;
