@@ -5,6 +5,9 @@ export const Container = styled.div`
   justify-content: center;
   width: 100%;
   height: 100%;
+  @media (min-width: 768px) {
+    width: 80%;
+  }
 `;
 
 export const Card = styled.div`
@@ -13,6 +16,7 @@ export const Card = styled.div`
   align-items: flex-start;
   gap: 6px;
   width: 95%;
+  text-align: justify;
   height: 100%;
   border-radius: 4px;
   background-color: ${({ theme }) => theme.palette.text.light.primary};
@@ -34,6 +38,22 @@ export const Img = styled.img`
     height: 280px;
   }
 `;
+export const ContainerType = styled.div`
+  width: 100%;
+  display: flex;
+  color: ${(props) => props.theme.palette.button.primary};
+  font-weight: 700;
+
+  align-items: center;
+  font-size: ${(props) => props.fontSize || "13px"};
+  @media (min-width: 768px) {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+`;
+export const ImgType = styled.img`
+  width: ${(props) => props.width || "50px"};
+`;
 
 export const Title = styled.h1`
   font-size: ${(props) => props.fontSize || "13px"};
@@ -43,6 +63,7 @@ export const Title = styled.h1`
 `;
 
 export const ContainerTitle = styled.div`
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;

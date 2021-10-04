@@ -9,6 +9,8 @@ import menu from "./menu.svg";
 import groot from "./groot.svg";
 import batman from "./batman.svg";
 import about from "./about.svg";
+import comicImg from "./comicRed.svg";
+import characterImg from "./character.svg";
 
 export {
   find,
@@ -22,4 +24,6 @@ export {
   groot,
   batman,
   about,
+  comicImg,
+  characterImg,
 };
