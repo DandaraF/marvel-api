@@ -9,16 +9,12 @@ import * as S from "./styles";
 const Search = () => {
   const location = useLocation();
   const query = new URLSearchParams(location.search).get("q") || "";
-  const [result, setResult] = useState([]);
-
-  // const parameters = [
-  //   { category: "comics", name: "title" },
-  //   { category: "characters", name: "name" },
-  // ];
+  const [characters, setCharacters] = useState([]);
+  const [comics, setComics] = useState([]);
 
   useEffect(() => {
-    // search("characters", "name", query, setResult);
-    search("comics", "title", query, setResult);
+    search("characters", "name", query, setCharacters);
+    search("comics", "title", query, setComics);
   }, [query]);
 
   return (
@@ -26,14 +22,21 @@ const Search = () => {
       <S.Container>
         <S.Content>
           <TitlePage>Results</TitlePage>
-          {result.map((character) => (
+          {comics.map((comic) => (
+            <Description
+              key={comic.id}
+              image={comic.thumbnail.path + "." + comic.thumbnail.extension}
+              title={comic.title}
+              description={comic.description}
+            />
+          ))}
+          {characters.map((character) => (
             <Description
               key={character.id}
               image={
                 character.thumbnail.path + "." + character.thumbnail.extension
               }
               title={character.name}
-              title={character.title}
               description={character.description}
               description={character.variantDescription}
             />
