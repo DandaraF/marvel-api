@@ -79,6 +79,7 @@ export const Title = styled.h1`
 export const Text = styled.p`
   text-align: justify;
   font-size: 15px;
+  font-style: ${(props) => props.fontStyle};
   @media (min-width: 768px) {
     font-size: 20px;
   }

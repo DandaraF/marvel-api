@@ -28,6 +28,10 @@ export const Card = styled.div`
     gap: 15px;
   }
 `;
+export const ContentImg = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 
 export const Img = styled.img`
   width: 150px;
@@ -43,7 +47,6 @@ export const ContainerType = styled.div`
   display: flex;
   color: ${(props) => props.theme.palette.button.primary};
   font-weight: 700;
-
   align-items: center;
   font-size: ${(props) => props.fontSize || "13px"};
   @media (min-width: 768px) {
@@ -76,6 +79,7 @@ export const ContainerTitle = styled.div`
 export const Text = styled.p`
   font-size: 13px;
   margin-bottom: 5px;
+  font-style: ${(props) => props.fontStyle};
   @media (min-width: 768px) {
     font-size: 20px;
   }
