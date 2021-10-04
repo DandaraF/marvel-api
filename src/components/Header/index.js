@@ -31,7 +31,7 @@ const Header = () => {
 
           <S.Search>
             <Input
-              placeholder="Search"
+              placeholder="Ex: spider-man"
               value={search}
               event={(ev) => setSearch(ev.target.value)}
               onKeyUp={(e) => e.key === "Enter" && handleClick()}

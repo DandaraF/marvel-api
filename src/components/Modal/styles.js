@@ -54,6 +54,7 @@ export const Content = styled.div`
 export const Img = styled.img`
   width: 110px;
   height: 160px;
+  border-radius: 2px;
   @media (min-width: 768px) {
     width: 180px;
     height: 240px;

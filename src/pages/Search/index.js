@@ -5,6 +5,7 @@ import { search } from "../../services/search";
 
 import { Layout, Description, TitlePage } from "../../components";
 import * as S from "./styles";
+import { comicImg, characterImg } from "../../assets/img";
 
 const Search = () => {
   const location = useLocation();
@@ -15,21 +16,15 @@ const Search = () => {
   useEffect(() => {
     search("characters", "name", query, setCharacters);
     search("comics", "title", query, setComics);
+    console.log(characters);
   }, [query]);
 
   return (
     <Layout>
       <S.Container>
         <S.Content>
-          <TitlePage>Results</TitlePage>
-          {comics.map((comic) => (
-            <Description
-              key={comic.id}
-              image={comic.thumbnail.path + "." + comic.thumbnail.extension}
-              title={comic.title}
-              description={comic.description}
-            />
-          ))}
+          <TitlePage>{query}</TitlePage>
+
           {characters.map((character) => (
             <Description
               key={character.id}
@@ -38,7 +33,20 @@ const Search = () => {
               }
               title={character.name}
               description={character.description}
-              description={character.variantDescription}
+              type="Character"
+              typeImg={characterImg}
+              width="35px"
+            />
+          ))}
+
+          {comics.map((comic) => (
+            <Description
+              key={comic.id}
+              image={comic.thumbnail.path + "." + comic.thumbnail.extension}
+              title={comic.title}
+              description={comic.description}
+              type="Comic"
+              typeImg={comicImg}
             />
           ))}
         </S.Content>
