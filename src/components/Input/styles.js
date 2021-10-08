@@ -20,7 +20,7 @@ export const Input = styled.input`
     font-size: 14px;
     ::placeholder {
       color: ${(props) =>
-        props.colorPlacerHolder || props.theme.palette.placeholder.primary};
+        props.colorPlacerHolder || props.theme.palette.placeholder.primary}85;
     }
     :focus {
       outline: none;

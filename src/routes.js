@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { Home, Comics, About, Search } from "./pages";
+import { Home, Comics, About, Search, NotFoundPage } from "./pages";
 
 export default function Routes() {
   return (
@@ -9,9 +9,7 @@ export default function Routes() {
         <Route exact path="/comics" component={Comics} />
         <Route exact path="/about" component={About} />
         <Route exact path="/search" component={Search} />
-        <Route path="*">
-          <h1>404.That's an error.</h1>
-        </Route>
+        <Route path="*" component={NotFoundPage} />
       </Switch>
     </BrowserRouter>
   );
