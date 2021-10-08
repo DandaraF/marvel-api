@@ -11,6 +11,7 @@ import batman from "./batman.svg";
 import about from "./about.svg";
 import comicImg from "./comicRed.svg";
 import characterImg from "./character.svg";
+import notFound from "./notfound.png";
 
 export {
   find,
@@ -26,4 +27,5 @@ export {
   about,
   comicImg,
   characterImg,
+  notFound,
 };
