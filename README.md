@@ -9,4 +9,4 @@ Consumindo dados da API da Marvel usando ReactJS. Na aplicação é possivel pes
 <li>Styled Components</li>
 <li>md5</li>
 
-
+![Demonstração desktop e mobile](./public/marvel_api.gif)
